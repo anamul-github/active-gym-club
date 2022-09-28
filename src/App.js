@@ -1,12 +1,12 @@
 import './App.css';
-import Container from './components/Container/Container';
+import Header from './components/Header/Header';
 import Exercises from './components/Exercises/Exercises';
 
 
 function App() {
   return (
     <div>
-      <Container></Container>
+      <Header></Header>
       <Exercises></Exercises>
     </div>
   );
