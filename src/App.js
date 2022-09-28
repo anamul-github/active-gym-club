@@ -1,13 +1,14 @@
 import './App.css';
+import Container from './components/Container/Container';
 import Header from './components/Header/Header';
-import Exercises from './components/Exercises/Exercises';
+
 
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Exercises></Exercises>
+      <Container></Container>
     </div>
   );
 }
