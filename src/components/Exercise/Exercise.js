@@ -6,7 +6,7 @@ const Exercise = (props) => {
     const { img, category, info, timeRequired } = props.exercise;
     return (
         <div className='card'>
-            <img src={img} className='card-img-top' alt=""></img>
+            <img src={img} className='card-img-top img-fluid w-100 image' alt=""></img>
             <div className='card-body'>
                 <h3 className='card-title'>{category}</h3>
                 <p className='card-text'>{info}</p>
@@ -14,7 +14,6 @@ const Exercise = (props) => {
                 <a href="/button" className='btn btn-primary'>Add to list</a>
             </div>
         </div>
-
     );
 };
 

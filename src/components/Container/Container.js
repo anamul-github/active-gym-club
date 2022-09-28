@@ -15,7 +15,7 @@ const Container = () => {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='col-9'>
+                <div className='col-9 card-container'>
                     {
                         exercises.map(exercise => <Exercise
                             key={exercise.id}
