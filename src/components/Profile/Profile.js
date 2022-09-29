@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { addToDb } from '../../Utilities/localStorage';
 
 const Profile = (props) => {
     const { time } = props;
@@ -9,6 +10,8 @@ const Profile = (props) => {
     }
 
     const [rest, setBreak] = useState(0);
+    // addToDb()
+
 
     return (
         <div>
