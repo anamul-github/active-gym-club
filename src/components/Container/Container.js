@@ -6,12 +6,19 @@ import './Container.css';
 
 const Container = () => {
     const [exercises, setExercises] = useState([]);
+    const [time, setTime] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setExercises(data))
     }, [])
+
+    const handleAddToList = (exercise) => {
+        // console.log(exercise.timeRequired);
+        const newTime = [...time, exercise];
+        setTime(newTime);
+    }
 
     return (
         <div className='container'>
@@ -21,11 +28,14 @@ const Container = () => {
                         exercises.map(exercise => <Exercise
                             key={exercise.id}
                             exercise={exercise}
+                            handleAddToList={handleAddToList}
                         ></Exercise>)
                     }
                 </div>
                 <div className='col-3 shadow rounded'>
-                    <Profile></Profile>
+                    <Profile
+                        time={time}
+                    ></Profile>
                 </div>
                 <div>
                     <About></About>

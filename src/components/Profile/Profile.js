@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Profile = () => {
+const Profile = (props) => {
+    const { time } = props;
+    console.log(time);
+
+
+
     return (
         <div>
             <div className='text-center mt-5'>
@@ -35,8 +40,8 @@ const Profile = () => {
 
             <h4 className='mt-5'>Exercise Details</h4>
             <div className='d-flex justify-content-between shadow-lg p-3 rounded mt-3'>
-                <h5>Exercise Time</h5>
-                <p>:</p>
+                <h5>Exercise Time: </h5>
+                <p>{time.length}</p>
             </div>
 
             <div className='pt-3 d-flex justify-content-between shadow-lg p-3 rounded mt-4'>
