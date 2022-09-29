@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Profile = (props) => {
     const { time } = props;
-    console.log(time);
 
     let total = 0;
     for (const exercise of time) {
         total = total + exercise.timeRequired;
     }
+
+    const [rest, setBreak] = useState(0);
 
     return (
         <div>
@@ -34,10 +35,10 @@ const Profile = (props) => {
             <div className='mt-5'>
                 <h4>Add A Break</h4>
                 <div className='d-flex justify-content-between shadow-lg p-3 rounded mt-3'>
-                    <button className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>10s</p></button>
-                    <button className='border-0 rounded-pill bg-primary p-2 fw-bold text-white'><p>20s</p></button>
-                    <button className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>30s</p></button>
-                    <button className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>40s</p></button>
+                    <button onClick={() => setBreak(10)} className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>10s</p></button>
+                    <button onClick={() => setBreak(20)} className='border-0 rounded-pill bg-primary p-2 fw-bold text-white'><p>20s</p></button>
+                    <button onClick={() => setBreak(30)} className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>30s</p></button>
+                    <button onClick={() => setBreak(40)} className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>40s</p></button>
                 </div>
             </div>
 
@@ -49,13 +50,11 @@ const Profile = (props) => {
 
             <div className='pt-3 d-flex justify-content-between shadow-lg p-3 rounded mt-4'>
                 <h5>Break Time</h5>
-                <p>:</p>
+                <p>{rest}s</p>
             </div>
 
             <button className='btn btn-primary w-100 mt-5'>Activity Completed</button>
         </div>
-
-
     );
 };
 

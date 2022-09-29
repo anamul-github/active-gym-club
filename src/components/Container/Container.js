@@ -15,7 +15,6 @@ const Container = () => {
     }, [])
 
     const handleAddToList = (exercise) => {
-        // console.log(exercise.timeRequired);
         const newTime = [...time, exercise];
         setTime(newTime);
     }
@@ -33,9 +32,7 @@ const Container = () => {
                     }
                 </div>
                 <div className='col-3 shadow rounded'>
-                    <Profile
-                        time={time}
-                    ></Profile>
+                    <Profile time={time}></Profile>
                 </div>
                 <div>
                     <About></About>
