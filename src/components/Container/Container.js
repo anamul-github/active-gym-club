@@ -24,7 +24,7 @@ const Container = () => {
                         ></Exercise>)
                     }
                 </div>
-                <div className='col-3'>
+                <div className='col-3 shadow rounded'>
                     <Profile></Profile>
                 </div>
                 <div>
