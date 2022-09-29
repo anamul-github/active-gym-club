@@ -1,21 +1,30 @@
-// const addToDb = id => {
+const addToDb = id => {
+    let breakTime = {};
 
+    const storedTime = localStorage.getItem('break-time');
+    if (storedTime) {
+        breakTime = JSON.parse(storedTime);
+    }
 
-//     const getStoredTime = () => {
-//         const storedTime = localStorage.getItem('break-time');
-//         let breakTime = {};
-//         if (storedTime) {
-//             breakTime = JSON.parse(storedTime);
-//         }
-//         return breakTime;
-//     }
+    const quantity = breakTime[id];
+    if (quantity) {
+        const newQuantity = quantity;
+        breakTime[id] = newQuantity;
+    }
+    else {
+        breakTime[id] = 1;
+    }
+    localStorage.setItem('break-time', JSON.stringify(breakTime));
+}
 
-//     const addTimeToDb = (time, quantity) => {
-//         const breakTime = getStoredTime();
-//         localStorage.setItem('break-time', JSON.stringify(breakTime));
-//     }
+const getStoredTime = () => {
+    let breakTime = {};
+    const storedTime = localStorage.getItem('break-time');
+    if (storedTime) {
+        breakTime = JSON.parse(storedTime);
+    }
+    return breakTime;
+}
 
-// }
-
-// export { addToDb }
+export { addToDb, getStoredTime }
 

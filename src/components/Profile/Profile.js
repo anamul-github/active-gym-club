@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-// import { addToDb } from '../../Utilities/localStorage';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { addToDb } from '../../Utilities/localStorage';
 
 const Profile = (props) => {
     const { time } = props;
@@ -10,7 +12,19 @@ const Profile = (props) => {
     }
 
     const [rest, setBreak] = useState(0);
-    // addToDb()
+    addToDb()
+
+
+    // toast
+    const notify = () => toast.success("Congratulations! You are done with your workout!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
 
 
     return (
@@ -56,7 +70,17 @@ const Profile = (props) => {
                 <p>{rest}s</p>
             </div>
 
-            <button className='btn btn-primary w-100 mt-5'>Activity Completed</button>
+            <button onClick={notify} className='btn btn-primary w-100 mt-5'>Activity Completed</button>
+            <ToastContainer position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            ></ToastContainer>
         </div>
     );
 };
