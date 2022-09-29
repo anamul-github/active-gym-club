@@ -11,7 +11,7 @@ const Exercise = (props) => {
             <div className='card-body'>
                 <h3 className='card-title'>{category}</h3>
                 <p className='card-text'>{info}</p>
-                <p>Time Required: {timeRequired}</p>
+                <p>Time Required: {timeRequired}s</p>
                 <div>
                     <button onClick={() => handleAddToList(exercise)} className='btn btn-primary'>Add to list</button>
                 </div>

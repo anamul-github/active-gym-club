@@ -4,41 +4,41 @@
         "img": "https://www.mensjournal.com/wp-content/uploads/mf/the_15_most_important_exercises_for_men_main.jpg?quality=70&strip=all",
         "category": "Dead Lifting",
         "info": "Push yourself beyond your capacity. It hurts now, but one day it'll be your warm up.",
-        "timeRequired": "20s"
+        "timeRequired": 20
     },
     {
         "id": 2,
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/30-day-arm-workout.jpg",
         "category": "Biceps Workout",
         "info": "Push yourself beyond your capacity. It hurts now, but one day it'll be your warm up.",
-        "timeRequired": "30s"
+        "timeRequired": 30
     },
     {
         "id": 3,
         "img": "https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2022/04/back-and-triceps-workout.jpg?fit=1000%2C667&ssl=1",
         "category": "Triceps Workout",
         "info": "Push yourself beyond your capacity. It hurts now, but one day it'll be your warm up.",
-        "timeRequired": "30s"
+        "timeRequired": 30
     },
     {
         "id": 4,
         "img": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2017_35/2139841/170831-stock-better-running-treadmill-ew-249p.jpg",
         "category": "Running Workout",
         "info": "Push yourself beyond your capacity. It hurts now, but one day it'll be your warm up.",
-        "timeRequired": "120s"
+        "timeRequired": 120
     },
     {
         "id": 5,
         "img": "https://www.bodybuilding.com/images/2016/june/leg-workouts-for-men-7-best-workouts-for-quads-glutes-hams-header-v2-960x540.jpg",
         "category": "Leg Workout",
         "info": "Push yourself beyond your capacity. It hurts now, but one day it'll be your warm up.",
-        "timeRequired": "30s"
+        "timeRequired": 30
     },
     {
         "id": 6,
         "img": "https://www.nitrocut.com/wp-content/uploads/2018/06/Whats-the-Best-Shoulder-Workout-for-Hypertrophy.jpg",
         "category": "Shoulder Workout",
         "info": "Push yourself beyond your capacity. It hurts now, but one day it'll be your warm up.",
-        "timeRequired": "30s"
+        "timeRequired": 30
     }
 ]

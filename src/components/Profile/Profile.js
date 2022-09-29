@@ -4,7 +4,10 @@ const Profile = (props) => {
     const { time } = props;
     console.log(time);
 
-
+    let total = 0;
+    for (const exercise of time) {
+        total = total + exercise.timeRequired;
+    }
 
     return (
         <div>
@@ -41,7 +44,7 @@ const Profile = (props) => {
             <h4 className='mt-5'>Exercise Details</h4>
             <div className='d-flex justify-content-between shadow-lg p-3 rounded mt-3'>
                 <h5>Exercise Time: </h5>
-                <p>{time.length}</p>
+                <p>{total}s</p>
             </div>
 
             <div className='pt-3 d-flex justify-content-between shadow-lg p-3 rounded mt-4'>
