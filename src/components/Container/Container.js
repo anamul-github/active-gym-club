@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import About from '../About/About';
 import Exercise from '../Exercise/Exercise';
 import Profile from '../Profile/Profile';
 import './Container.css';
@@ -25,6 +26,9 @@ const Container = () => {
                 </div>
                 <div className='col-3'>
                     <Profile></Profile>
+                </div>
+                <div>
+                    <About></About>
                 </div>
             </div>
         </div>
