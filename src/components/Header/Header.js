@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className='ms-5 ps-4 w-75'>
             <h1 className='text-primary m-5 mb-5 text-center'><span><FontAwesomeIcon icon={faWeightHanging}></FontAwesomeIcon></span> Active Gym Club</h1>
-            <h2 className='ms-5'>Select your Exercise:</h2>
+            <h2 className='ms-5 text-center'>Select your Exercise:</h2>
         </div>
     );
 };

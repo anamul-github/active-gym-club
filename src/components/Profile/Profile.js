@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { addToDb, getStoredTime } from '../../Utilities/localStorage';
 
 const Profile = (props) => {
     const { time } = props;
@@ -11,9 +10,17 @@ const Profile = (props) => {
         total = total + exercise.timeRequired;
     }
 
-    const [rest, setBreak] = useState(0);
-    // addToDb(rest);
+    const [breakTime, setBreakTime] = useState(0);
 
+    // local storage
+    const currentBreak = JSON.parse(localStorage.getItem('break-time'));
+
+    const setRest = (item) => {
+        localStorage.setItem('break-time', JSON.stringify(item));
+
+        const newBreakTime = JSON.parse(localStorage.getItem('break-time'));
+        setBreakTime(newBreakTime);
+    }
 
     // toast
     const notify = () => toast.success("Congratulations! You are done with your workout!", {
@@ -52,10 +59,10 @@ const Profile = (props) => {
             <div className='mt-5'>
                 <h4>Add A Break</h4>
                 <div className='d-flex justify-content-between shadow-lg p-3 rounded mt-3'>
-                    <button onClick={() => setBreak(10)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>10s</button>
-                    <button onClick={() => setBreak(20)} className='border-0 rounded-pill bg-primary p-2 fw-bold text-white'>20s</button>
-                    <button onClick={() => setBreak(30)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>30s</button>
-                    <button onClick={() => setBreak(40)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>40s</button>
+                    <button onClick={() => setRest(10)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>10s</button>
+                    <button onClick={() => setRest(20)} className='border-0 rounded-pill bg-primary p-2 fw-bold text-white'>20s</button>
+                    <button onClick={() => setRest(30)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>30s</button>
+                    <button onClick={() => setRest(40)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>40s</button>
                 </div>
             </div>
 
@@ -67,7 +74,7 @@ const Profile = (props) => {
 
             <div className='pt-3 d-flex justify-content-between shadow-lg p-3 rounded mt-4'>
                 <h5>Break Time</h5>
-                <p>{rest}s</p>
+                <p>{currentBreak ? currentBreak : 0}s</p>
             </div>
 
             <button onClick={notify} className='btn btn-primary w-100 mt-5'>Activity Completed</button>
