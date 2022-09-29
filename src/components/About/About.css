@@ -1,7 +1,6 @@
 /* Mobile Device */
 @media screen and (max-width: 600px) {
     .about {
-        padding-top: 380px;
         width: 90% !important;
     }
 }

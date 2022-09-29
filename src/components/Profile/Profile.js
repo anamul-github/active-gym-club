@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addToDb } from '../../Utilities/localStorage';
+// import { addToDb, getStoredTime } from '../../Utilities/localStorage';
 
 const Profile = (props) => {
     const { time } = props;
@@ -12,7 +12,7 @@ const Profile = (props) => {
     }
 
     const [rest, setBreak] = useState(0);
-    addToDb()
+    // addToDb(rest);
 
 
     // toast
@@ -52,10 +52,10 @@ const Profile = (props) => {
             <div className='mt-5'>
                 <h4>Add A Break</h4>
                 <div className='d-flex justify-content-between shadow-lg p-3 rounded mt-3'>
-                    <button onClick={() => setBreak(10)} className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>10s</p></button>
-                    <button onClick={() => setBreak(20)} className='border-0 rounded-pill bg-primary p-2 fw-bold text-white'><p>20s</p></button>
-                    <button onClick={() => setBreak(30)} className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>30s</p></button>
-                    <button onClick={() => setBreak(40)} className='border-0 rounded-pill gray-400 p-2 fw-bold'><p>40s</p></button>
+                    <button onClick={() => setBreak(10)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>10s</button>
+                    <button onClick={() => setBreak(20)} className='border-0 rounded-pill bg-primary p-2 fw-bold text-white'>20s</button>
+                    <button onClick={() => setBreak(30)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>30s</button>
+                    <button onClick={() => setBreak(40)} className='border-0 rounded-pill gray-400 p-2 fw-bold'>40s</button>
                 </div>
             </div>
 

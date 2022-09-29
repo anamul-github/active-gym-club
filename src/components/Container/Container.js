@@ -31,7 +31,7 @@ const Container = () => {
                         ></Exercise>)
                     }
                 </div>
-                <div className='col-3 shadow rounded'>
+                <div className='col-3 shadow rounded profile'>
                     <Profile time={time}></Profile>
                 </div>
                 <div>
